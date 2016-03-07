@@ -1,0 +1,21 @@
+{
+    "name": "jemoker/getui-push",
+    "description": "getui push",
+    "authors": [
+        {
+            "name": "Jemoker",
+            "email": "i@jemoker.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "classmap" : [
+            "src/igetui",
+            "src/protobuf"
+        ],
+        "psr-4": {
+            "Jemoker\\GetuiPush\\": "src/"
+
+        }
+    }
+}
