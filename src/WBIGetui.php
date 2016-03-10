@@ -8,7 +8,6 @@ use IGtSingleMessage;
 use IGtTarget;
 use IGtAppMessage;
 use IGtTransmissionTemplate;
-
 require __DIR__.'/IGeTui.php';
 
 class WBIGetui
