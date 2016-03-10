@@ -7,6 +7,7 @@ use IGtNotificationTemplate;
 use IGtSingleMessage;
 use IGtTarget;
 
+require __DIR__.'/IGeTui.php';
 
 class WBAGetui
 {
@@ -92,7 +93,7 @@ class WBAGetui
     	
 		//个推信息体
 		//基于应用消息体
-		$message = new IGtAppMessage();
+		$message = new \IGtAppMessage();
 	
 		$message->set_isOffline(true);
 		$message->set_offlineExpireTime(3600*12*1000);//离线时间单位为毫秒，例，两个小时离线为3600*1000*2
@@ -124,7 +125,7 @@ class WBAGetui
 	
 	//透传
 	public static function IGtTransmissionTemplateDemo($payload){
-		$template =  new IGtTransmissionTemplate();
+		$template =  new \IGtTransmissionTemplate();
 		$template->set_appId(config('getui-push.android.id'));//应用appid
 		$template->set_appkey(config('getui-push.android.key'));//应用appkey
 		$template->set_transmissionType(1);//透传消息类型
@@ -134,7 +135,7 @@ class WBAGetui
 	
 	//打开链接
 	public static function IGtLinkTemplateDemo($title, $content, $url){
-		$template =  new IGtLinkTemplate();
+		$template =  new \IGtLinkTemplate();
 		$template ->set_appId(config('getui-push.android.id'));//应用appid
 		$template ->set_appkey(config('getui-push.android.key'));//应用appkey
 		$template ->set_title($title);//通知栏标题
