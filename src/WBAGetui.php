@@ -7,7 +7,6 @@ use IGtNotificationTemplate;
 use IGtSingleMessage;
 use IGtTarget;
 
-require __DIR__.'/../vendor/autoload.php';
 
 class WBAGetui
 {
